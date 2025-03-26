@@ -8,8 +8,9 @@ setup(
     author="Alex Hou",
     author_email="houalex@gmail.com",
     description="智能数据治理工具集",
-    long_description=open("README.md").read(),
-    packages=find_packages(),
+    long_description=open("README.md", encoding="utf-8").read(),
+    long_description_content_type="text/markdown",
+    packages=find_packages(include=["core", "core.*", "dataagents", "dataagents.*"]),
     install_requires=[
         "autogen>=0.2.0",
         "minio>=7.0.0",
