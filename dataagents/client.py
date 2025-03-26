@@ -119,7 +119,6 @@ class DataGovernanceClient:
         )
 
     def process_directory(self, 
-                         input_prefix: str,
                          sensitive_fields: List[str],
                          max_workers: int = 4) -> Dict[str, Any]:
         """处理目录下所有文件"""
@@ -136,7 +135,7 @@ class DataGovernanceClient:
             # 获取文件列表
             files = self.storage.list_directory(
                 self.bucket, 
-                f"{self.base_path}/{input_prefix}"
+                f"{self.base_path}/raw"
             )
             if not files:
                 raise ValueError("目录中没有可处理文件")
