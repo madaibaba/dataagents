@@ -17,7 +17,6 @@ client = DataGovernanceClient(
 )
 
 result = client.process_directory(
-    input_prefix="raw", 
     sensitive_fields=["name"],
     max_workers=4
 )
