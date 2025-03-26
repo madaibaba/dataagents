@@ -29,4 +29,4 @@ Repository = "https://github.com/madaibaba/dataagents"
 Documentation = "https://github.com/madaibaba/dataagents/wiki"
 
 [tool.setuptools]
-packages = ["dataagents"]
+packages = { find = { where = ["dataagents"] } }
